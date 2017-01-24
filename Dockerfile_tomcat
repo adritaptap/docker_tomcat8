@@ -1,0 +1,7 @@
+RUN apt-get update && apt-get install -y tomcat8 && apt-get install -y haveged
+RUN apt-get install net-tools && apt-get install -y wget
+
+add start.sh /start.sh
+RUN chmod +wx start.sh
+
+CMD ["/start.sh"] 
